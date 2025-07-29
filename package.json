@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "format": "prettier . --write",
+    "lint": "eslint . --fix",
+    "prepare": "rm -rf dist && tsc"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nanoid": "^5.1.5"
+  },
+  "devDependencies": {
+    "@nizhdanov/eslint": "^0.0.2",
+    "@nizhdanov/prettier": "^0.0.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "eslint": "^9.32.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
