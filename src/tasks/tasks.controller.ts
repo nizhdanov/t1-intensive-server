@@ -18,12 +18,10 @@ export const getTaskById = (req: Request, res: Response) => {
 
 export const createTask = (req: Request, res: Response) => {
   const dto: CreateTaskDto = req.body;
-
   const newTask: Task = {
     id: nanoid(8),
     ...dto
   };
-
   tasks.push(newTask);
   res.status(201).json(newTask);
 };
@@ -34,7 +32,6 @@ export const updateTask = (req: Request, res: Response) => {
 
   const dto: Partial<Task> = req.body;
   Object.assign(task, dto);
-
   res.json(task);
 };
 
