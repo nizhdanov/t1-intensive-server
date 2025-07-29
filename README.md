@@ -1,3 +1,7 @@
+Deploy: [On Render](https://t1-intensive-server.onrender.com/)
+
+Frontend: [GitHub](https://github.com/nizhdanov/t1-intensive-web)
+
 # Функционал
 
 - CRUD операции по сущности tasks;
