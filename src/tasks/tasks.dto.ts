@@ -1,12 +1,5 @@
-import type { TaskCategory, TaskPriority, TaskStatus } from './tasks.model.js';
+import type { Task } from './tasks.model.js';
 
-export interface CreateTaskDto {
-  category: TaskCategory;
-  createdAt: string;
-  description?: string;
-  priority: TaskPriority;
-  status: TaskStatus;
-  title: string;
-}
+export interface CreateTaskDto extends Omit<Task, 'id'> {}
 
 export interface UpdateTaskDto extends Partial<CreateTaskDto> {}
